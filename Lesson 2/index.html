@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        //min
+        //task1
+    var user ={};
+        user.name = "Пилип";
+        user.surname = "Шевченко";
+        name = "Сергій";
+        delete user.name;
+        //task2
+        var employeeSalaries = { 
+            employee1: 200,
+            employee2: 100,
+            employee3: 300
+        };
+        var sumSalary = 0;
+        for(var key in employeeSalaries){
+            sumSalary += employeeSalaries[key];
+        }
+        console.log(sumSalary);
+        //task3
+        
+        function sum(a, b, c){
+            switch (c) {
+                case "Додати":
+                    console.log(a+b);
+                    break;
+                case "Відняти":
+                    console.log(a-b);
+                    break;
+                case "Помножити":
+                    console.log(a*b);
+                    break;
+                default:
+                    console.error("Такої операції немає!");
+                    break;
+            }
+        }
+        sum(10, 20, "Додати");
+        sum(10,20, "Відняти");
+        sum(10,20,"Помножити");
+        sum(10,20,"Поділити");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
