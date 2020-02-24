@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+    //task1
+        var products = [1,2,3,4,5,6,6,7,5,4,3];
+        console.log(products[products.length-1]);
+        
+    //task2
+        var styles =["Джаз", "Блюз"];
+        styles.push("Рок-н-Ролл");
+        styles[styles.length-2] = "Класика";
+        styles.splice(0,1);
+        console.log(styles);
+        styles.unshift("Реп","Реггі");
+        console.log(styles);
+    //task3
+        function find(arr, value){
+            for(var i=0; i<arr.length; i++){
+                if(arr[i]==value){
+                   console.log(i);
+                }else{
+                    console.log("-1");
+                }
+            }
+            
+        }
+        find(styles, "Класика");
+    //task4
+        var array = [1,3,4,5,6,4,2];
+        function filterRange(array,a,b){
+            
+            console.log(array.slice(a,b));
+        }
+        filterRange(array,1,4);
+    //task5
+        var a = "my-short-string";
+        function camelize(str){
+           let str2 = str.split('-');
+            for (var i = 1; i < str2.length; i++) {
+                str2[i] = str2[i].charAt(0).toUpperCase() + str2[i].slice(1);
+            }
+            str = str2.join('');
+            console.log(str);
+        }
+        camelize(a);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
