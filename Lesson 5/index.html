@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+     
+</head>
+<body>
+   <script>
+            //task1
+       function makeBuffer() {
+       var text = '';
+
+       return {
+       getText : function() {
+       text++;
+       },
+       add : function(value){
+       text = text +" "+ value.toString();
+       },
+       print : function() {
+       return text;
+       },
+       reset : function() {
+       text = '';
+       },
+       clear : function(){
+       text = '';
+       }
+       };
+       };
+
+       var buffer = makeBuffer();
+
+       buffer.add( "JavaScript");
+       buffer.add( "Вчити");
+       buffer.add( "Потрібно!");
+
+       console.log(buffer.print());
+
+       buffer.reset();
+       buffer.add(0);
+       buffer.add(1);
+       buffer.add(0);
+       console.log (buffer.print());
+
+            //task2
+    buffer.reset();
+    buffer.add("Тест");
+    buffer.add("тебе не з'їсть");
+//    alert(buffer.print()); 
+    buffer.clear ();
+    console.log(buffer.print());
+    
+
+    </script>
+</body>
+</html>
